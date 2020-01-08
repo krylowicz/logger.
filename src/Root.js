@@ -1,6 +1,12 @@
 import React from 'react';
-// #3B69F2
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from './theme/GlobalStyle';
+import { theme } from './theme/theme';
 
-const Root = () => <h1>hello there</h1>;
+const Root = () => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+  </ThemeProvider>
+);
 
 export default Root;

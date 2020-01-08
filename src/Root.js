@@ -1,12 +1,6 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import GlobalStyle from './theme/GlobalStyle';
-import { theme } from './theme/theme';
+import MainTemplate from 'templates/MainTemplate';
 
-const Root = () => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
-  </ThemeProvider>
-);
+const Root = () => <MainTemplate />;
 
 export default Root;

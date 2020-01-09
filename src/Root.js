@@ -1,14 +1,15 @@
 import React from 'react';
-import MainTemplate from 'templates/MainTemplate/MainTemplate';
-import HeroTemplate from 'templates/HeroTemplate/HeroTemplate';
+import { BrowserRouter, Route } from 'react-router-dom';
+import HomeView from 'views/HomeView';
+import CreateAccountView from 'views/CreateAccountView';
+import LoginView from 'views/LoginView';
 
 const Root = () => (
-  // <MainTemplate>
-  //   <HeroTemplate />
-  // </MainTemplate>
-  <MainTemplate>
-    <HeroTemplate />
-  </MainTemplate>
+  <BrowserRouter>
+    <Route exact path="/" component={HomeView} />
+    <Route exact path="/login" component={LoginView} />
+    <Route exact path="/create-account" component={CreateAccountView} />
+  </BrowserRouter>
 );
 
 export default Root;

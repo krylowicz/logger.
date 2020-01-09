@@ -1,31 +1,38 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import Constants from 'utils/constants';
 
 const ListWrapper = styled.ul`
-  color: ${({ theme }) => theme.color.light};
   list-style: none;
   display: flex;
   flex-direction: row;
-
-  &:not(:last-child) {
-    margin-right: 20px;
-  }
 
   @media (max-width: 1024px) {
     display: none;
   }
 `;
 
-const ListItem = styled.ul`
+const Link = styled(NavLink)`
   cursor: pointer;
+  text-decoration: none;
+  color: ${({ theme }) => theme.color.light};
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
 `;
 
 const DesktopMenu = () => (
   <ListWrapper>
-    {Constants.MENU_ITEMS.map(item => (
-      <ListItem key={item}>{item}</ListItem>
-    ))}
+    <Link exact to="/">
+      home
+    </Link>
+    <Link exact to="/create-account">
+      create account
+    </Link>
+    <Link exact to="/about">
+      about
+    </Link>
   </ListWrapper>
 );
 

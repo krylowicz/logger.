@@ -1,7 +1,7 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Constants from 'utils/constants';
 
 const Wrapper = styled.div`
   position: fixed;
@@ -26,10 +26,13 @@ const Wrapper = styled.div`
   }
 `;
 
-const MenuLink = styled.p`
+const Link = styled(NavLink)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.color.black};
   font-size: 2.2rem;
   opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
   transition: opacity 0.25s 0.2s ease-in-out;
+  margin-bottom: 25px;
 
   &:last-child {
     margin-bottom: 150px;
@@ -38,11 +41,20 @@ const MenuLink = styled.p`
 
 const MobileMenu = ({ isOpen }) => (
   <Wrapper isOpen={isOpen}>
-    {Constants.MENU_ITEMS.map(item => (
-      <MenuLink isOpen={isOpen} key={item}>
-        {item}
-      </MenuLink>
-    ))}
+    {/* {Constants.MENU_ITEMS.map(item => ( */}
+    {/*  <MenuLink isOpen={isOpen} key={item}> */}
+    {/*    {item} */}
+    {/*  </MenuLink> */}
+    {/* ))} */}
+    <Link exact to="/home" isOpen={isOpen}>
+      home
+    </Link>
+    <Link exact to="/create-account" isOpen={isOpen}>
+      create account
+    </Link>
+    <Link exact to="/about" isOpen={isOpen}>
+      about
+    </Link>
   </Wrapper>
 );
 

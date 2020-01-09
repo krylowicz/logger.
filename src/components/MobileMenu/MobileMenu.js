@@ -42,11 +42,6 @@ const Link = styled(NavLink)`
 
 const MobileMenu = ({ isOpen }) => (
   <Wrapper isOpen={isOpen}>
-    {/* {Constants.MENU_ITEMS.map(item => ( */}
-    {/*  <MenuLink isOpen={isOpen} key={item}> */}
-    {/*    {item} */}
-    {/*  </MenuLink> */}
-    {/* ))} */}
     <Link exact to="/home" isOpen={isOpen}>
       home
     </Link>

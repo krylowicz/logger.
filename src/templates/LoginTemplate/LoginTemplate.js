@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import LoginForm from 'components/LoginForm/LoginForm';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -15,7 +16,7 @@ const Wrapper = styled.div`
 
 const LoginTemplate = () => (
   <Wrapper>
-    <h1>login</h1>
+    <LoginForm />
   </Wrapper>
 );
 

@@ -30,6 +30,7 @@ const Link = styled(NavLink)`
   text-decoration: none;
   color: ${({ theme }) => theme.color.black};
   font-size: 2.2rem;
+  font-weight: ${({ theme }) => theme.bold};
   opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
   transition: opacity 0.25s 0.2s ease-in-out;
   margin-bottom: 25px;

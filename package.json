@@ -1,5 +1,5 @@
 {
-  "name": "login-page",
+  "name": "logger.",
   "version": "v0.1.0",
   "private": true,
   "dependencies": {

@@ -4,6 +4,10 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-props-no-spreading": "off"
   },
+  "globals": {
+    "window": true,
+    "document": true
+  },
   "settings": {
     "import/resolver": {
       "node": {

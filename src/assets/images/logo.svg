@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="635" height="240" viewBox="0 0 635 240">
+  <g id="Component_1_1" data-name="Component 1 – 1" transform="translate(7 7)">
+    <g id="logo-large" transform="translate(-7 -7)">
+      <path class="logo-stroke" id="Path_1" data-name="Path 1" d="M125,85v49.434c-3.246,6.227-6.981,7.308-15,7.566" fill="none" stroke="#ede8d9" stroke-linecap="round" stroke-linejoin="round" stroke-width="15"/>
+      <path class="logo-stroke" id="Path_2" data-name="Path 2" d="M73,88v18" fill="none" stroke="#ede8d9" stroke-linecap="round" stroke-width="18"/>
+      <path class="logo-stroke" id="Path_3" data-name="Path 3" d="M170,88v18" fill="none" stroke="#ede8d9" stroke-linecap="round" stroke-width="18"/>
+      <path class="logo-stroke" id="Path_4" data-name="Path 4" d="M7,68.027V39A32,32,0,0,1,39,7H66.5M7,172.509V201a32,32,0,0,0,32,32H66.5M174,233h27a32,32,0,0,0,32-32V172.509m0-104.482V39A32,32,0,0,0,201,7H174" fill="none" stroke="#ede8d9" stroke-linecap="round" stroke-width="14"/>
+      <path class="logo-stroke" id="Path_5" data-name="Path 5" d="M84,166a48.765,48.765,0,0,0,74,0" fill="none" stroke="#ede8d9" stroke-linecap="round" stroke-width="14"/>
+    </g>
+    <text class="text-fill" id="logger." transform="translate(276 57)" fill="#ede8d9" font-size="100" font-family="Ubuntu-Medium, Ubuntu" font-weight="500"><tspan x="0" y="93">logger.</tspan></text>
+  </g>
+</svg>

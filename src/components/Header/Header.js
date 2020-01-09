@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Logo from 'components/Logo/Logo';
 import Hamburger from 'components/Hamburger/Hamburger';
 import MobileMenu from 'components/MobileMenu/MobileMenu';
+import DesktopMenu from 'components/DesktopMenu/DesktopMenu';
 
 const Wrapper = styled.nav`
   display: flex;
@@ -57,6 +58,7 @@ const Header = () => {
       <StyledLogo isOpen={isMenuOpen} />
       <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
       <MobileMenu isOpen={isMenuOpen} />
+      <DesktopMenu />
     </Wrapper>
   );
 };

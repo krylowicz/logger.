@@ -16,5 +16,5 @@ const MainTemplate = ({ children }) => (
 export default MainTemplate;
 
 MainTemplate.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.object.isRequired,
 };

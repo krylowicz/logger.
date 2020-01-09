@@ -9,6 +9,10 @@ const StyledHamburger = styled.button`
   position: relative;
   right: -15px;
   z-index: 9999;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
 `;
 
 const InnerHamburger = styled.div`
@@ -26,6 +30,7 @@ const InnerHamburger = styled.div`
     width: 22px;
     height: 2px;
     background-color: ${({ theme, isOpen }) => (isOpen ? theme.color.black : theme.color.light)};
+    transition: transform 0.2s ease-out;
   }
 
   &::before {

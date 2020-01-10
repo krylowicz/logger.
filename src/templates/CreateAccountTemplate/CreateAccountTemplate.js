@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import CreateAccountForm from 'components/CreateAccountForm/CreateAccountForm';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -15,7 +16,7 @@ const Wrapper = styled.div`
 
 const CreateAccountTemplate = () => (
   <Wrapper>
-    <h1>create account</h1>
+    <CreateAccountForm />
   </Wrapper>
 );
 

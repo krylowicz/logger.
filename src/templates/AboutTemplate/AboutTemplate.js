@@ -23,7 +23,7 @@ const Text = styled.p`
 
 const AboutTemplate = () => (
   <Wrapper>
-    <Text>logger is my first project that connects react.js and firebase. It allows you to create account and for now that&aposs all. I just wanted to learn how to use firebase with react.</Text>
+    <Text>logger is my first project that connects react.js and firebase. It allows you to create account and for now that&#x27;s all. I just wanted to learn how to use firebase with react.</Text>
   </Wrapper>
 );
 

@@ -4,6 +4,7 @@ import Firebase, { FirebaseContext } from 'actions';
 import HomeView from 'views/HomeView';
 import CreateAccountView from 'views/CreateAccountView';
 import LoginView from 'views/LoginView';
+import AboutView from 'views/AboutView';
 
 const Root = () => (
   <FirebaseContext.Provider value={new Firebase()}>
@@ -11,6 +12,7 @@ const Root = () => (
       <Route exact path="/" component={HomeView} />
       <Route exact path="/login" component={LoginView} />
       <Route exact path="/create-account" component={CreateAccountView} />
+      <Route exact path="/about" component={AboutView} />
     </BrowserRouter>
   </FirebaseContext.Provider>
 );

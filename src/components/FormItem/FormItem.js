@@ -5,6 +5,11 @@ import '../../assets/index.css';
 
 const Label = styled.label`
   color: ${({ theme }) => theme.color.light};
+  position: absolute;
+  top: 3px;
+  left: 0;
+  transition: 0.2s ease-out all;
+  font-size: 16px;
 `;
 
 const Input = styled.input`
@@ -31,10 +36,10 @@ const FormItemBar = styled.div`
   transition: 0.1s all;
 `;
 
-const FormItem = ({ name, type, id, content, onChangeFn }) => (
+const FormItem = ({ name, type, id, content, onChangeFn, htmlFor }) => (
   <StyledFormItem>
     <Input className="input" type={type} name={name} id={id} placeholder=" " onChange={onChangeFn} />
-    <Label className="label" htmlFor={id}>
+    <Label className="label" htmlFor={htmlFor}>
       {content}
     </Label>
     <FormItemBar />
@@ -48,5 +53,6 @@ FormItem.propTypes = {
   type: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
+  htmlFor: PropTypes.string.isRequired,
   onChangeFn: PropTypes.func.isRequired,
 };

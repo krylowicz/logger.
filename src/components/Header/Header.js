@@ -37,6 +37,10 @@ const InnerWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
 `;
 
 const StyledLogo = styled(Logo)`

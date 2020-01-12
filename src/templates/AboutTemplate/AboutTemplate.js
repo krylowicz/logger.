@@ -19,6 +19,12 @@ const Wrapper = styled.div`
 
 const Text = styled.p`
   color: ${({ theme }) => theme.color.light};
+
+  @media (min-width: 1024px) {
+    padding: 0 200px;
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
 `;
 
 const AboutTemplate = () => (

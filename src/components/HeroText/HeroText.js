@@ -7,7 +7,8 @@ const Wrapper = styled.div`
   padding: 20px;
 
   @media (min-width: 1024px) {
-    display: none;
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -29,13 +30,16 @@ const Link = styled(NavLink)`
   right: 55px;
   text-align: center;
   text-decoration: none;
+
+  @media (min-width: 1024px) {
+    position: static;
+    margin: 0 auto;
+  }
 `;
 
 const HeroText = () => (
   <Wrapper>
-    <Text>
-      logger. is a login page that uses <span>firebase</span>
-    </Text>
+    <Text>logger. is a login page that uses firebase</Text>
     <Link exact to="/login">
       log in
     </Link>

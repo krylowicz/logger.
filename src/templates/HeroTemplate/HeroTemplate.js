@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import HeroText from 'components/HeroText/HeroText';
+import HeroTextAuth from 'components/HeroTextAuth/HeroTextAuth';
+import AuthUserContext from 'components/Session/SessionContext';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -14,10 +16,18 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const HeroTemplate = () => (
+const HeroTemplateAuth = () => (
+  <Wrapper>
+    <HeroTextAuth />
+  </Wrapper>
+);
+
+const HeroTemplateNonAuth = () => (
   <Wrapper>
     <HeroText />
   </Wrapper>
 );
+
+const HeroTemplate = () => <AuthUserContext.Consumer>{authUser => (authUser ? <HeroTemplateAuth /> : <HeroTemplateNonAuth />)}</AuthUserContext.Consumer>;
 
 export default HeroTemplate;

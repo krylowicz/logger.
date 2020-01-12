@@ -15,10 +15,15 @@ const StyledButton = styled.button`
   margin-top: 10px;
 `;
 
-const Button = ({ children }) => <StyledButton>{children}</StyledButton>;
+const Button = ({ children, disabled }) => <StyledButton disabled={disabled}>{children}</StyledButton>;
 
 export default Button;
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
+  disabled: PropTypes.object,
+};
+
+Button.defaultProps = {
+  disabled: null,
 };

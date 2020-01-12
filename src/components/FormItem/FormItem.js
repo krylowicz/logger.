@@ -31,11 +31,11 @@ const FormItemBar = styled.div`
   transition: 0.1s all;
 `;
 
-const FormItem = ({ input }) => (
+const FormItem = ({ name, type, id, content, onChangeFn }) => (
   <StyledFormItem>
-    <Input className="input" type="text" name={input} id={input} placeholder=" " />
-    <Label className="label" htmlFor={input}>
-      {input}
+    <Input className="input" type={type} name={name} id={id} placeholder=" " onChange={onChangeFn} />
+    <Label className="label" htmlFor={id}>
+      {content}
     </Label>
     <FormItemBar />
   </StyledFormItem>
@@ -44,5 +44,9 @@ const FormItem = ({ input }) => (
 export default FormItem;
 
 FormItem.propTypes = {
-  input: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  onChangeFn: PropTypes.func.isRequired,
 };

@@ -42,7 +42,7 @@ const Link = styled(NavLink)`
 
 const MobileMenu = ({ isOpen }) => (
   <Wrapper isOpen={isOpen}>
-    <Link exact to="/home" isOpen={isOpen}>
+    <Link exact to="/" isOpen={isOpen}>
       home
     </Link>
     <Link exact to="/create-account" isOpen={isOpen}>

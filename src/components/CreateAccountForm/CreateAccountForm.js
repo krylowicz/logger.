@@ -48,9 +48,9 @@ class CreateAccountFormBase extends React.Component {
 
     return (
       <Form onSubmitFn={this.onSubmit}>
-        <FormItem name="email" type="email" id="email" content="e-mail" onChangeFn={this.onChange} />
-        <FormItem name="passwordOne" type="password" id="password" content="password" onChangeFn={this.onChange} />
-        <FormItem name="passwordTwo" type="password" id="password" content="confirm password" onChangeFn={this.onChange} />
+        <FormItem name="email" type="email" id="email" content="email" onChangeFn={this.onChange} htmlFor="email" />
+        <FormItem name="passwordOne" type="password" id="passwordOne" content="password" onChangeFn={this.onChange} htmlFor="passwordOne" />
+        <FormItem name="passwordTwo" type="password" id="password" content="confirm password" onChangeFn={this.onChange} htmlFor="passwordTwo" />
         <Button disabled={isInvalid}>create account</Button>
 
         {error && <p>{error.message}</p>}
@@ -66,6 +66,11 @@ export default CreateAccountForm;
 CreateAccountFormBase.propTypes = {
   firebase: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired,
-  doCreateUserWithEmailAndPassword: PropTypes.func.isRequired,
-  push: PropTypes.func.isRequired,
+  doCreateUserWithEmailAndPassword: PropTypes.func,
+  push: PropTypes.func,
+};
+
+CreateAccountFormBase.defaultProps = {
+  doCreateUserWithEmailAndPassword: undefined,
+  push: undefined,
 };

@@ -31,10 +31,10 @@ const FormItemBar = styled.div`
   transition: 0.1s all;
 `;
 
-const FormItem = ({ name, type, id, content, onChangeFn }) => (
+const FormItem = ({ name, type, id, content, onChangeFn, htmlFor }) => (
   <StyledFormItem>
     <Input className="input" type={type} name={name} id={id} placeholder=" " onChange={onChangeFn} />
-    <Label className="label" htmlFor={id}>
+    <Label className="label" htmlFor={htmlFor}>
       {content}
     </Label>
     <FormItemBar />
@@ -48,5 +48,6 @@ FormItem.propTypes = {
   type: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
+  htmlFor: PropTypes.string.isRequired,
   onChangeFn: PropTypes.func.isRequired,
 };

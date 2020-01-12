@@ -21,7 +21,7 @@ export default Button;
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
-  disabled: PropTypes.object,
+  disabled: PropTypes.bool,
 };
 
 Button.defaultProps = {

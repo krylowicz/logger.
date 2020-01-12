@@ -5,6 +5,11 @@ import '../../assets/index.css';
 
 const Label = styled.label`
   color: ${({ theme }) => theme.color.light};
+  position: absolute;
+  top: 3px;
+  left: 0;
+  transition: 0.2s ease-out all;
+  font-size: 16px;
 `;
 
 const Input = styled.input`

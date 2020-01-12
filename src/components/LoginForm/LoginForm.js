@@ -47,8 +47,8 @@ class LoginFormBase extends React.Component {
 
     return (
       <Form onSubmitFn={this.onSubmit}>
-        <FormItem name="email" id="email" type="email" content="e-mail" onChangeFn={this.onChange} />
-        <FormItem name="password" id="password" type="password" content="password" onChangeFn={this.onChange} />
+        <FormItem name="email" id="email" type="email" content="e-mail" onChangeFn={this.onChange} htmlFor="email" />
+        <FormItem name="password" id="password" type="password" content="password" onChangeFn={this.onChange} htmlFor="password" />
         <Button disabled={isInvalid}>log in</Button>
 
         {error && <p>error.message</p>}

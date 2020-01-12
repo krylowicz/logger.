@@ -4,6 +4,8 @@ import Logo from 'components/Logo/Logo';
 import Hamburger from 'components/Hamburger/Hamburger';
 import MobileMenu from 'components/MobileMenu/MobileMenu';
 import DesktopMenu from 'components/DesktopMenu/DesktopMenu';
+import LogOutButton from 'components/LogOutButton/LogOutButton';
+import AuthUserContext from 'components/Session/SessionContext';
 
 const Wrapper = styled.nav`
   display: flex;
@@ -31,6 +33,12 @@ const Wrapper = styled.nav`
   }
 `;
 
+const InnerWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
 const StyledLogo = styled(Logo)`
   position: relative;
   z-index: 9999;
@@ -46,7 +54,27 @@ const StyledLogo = styled(Logo)`
   }
 `;
 
-const Header = () => {
+const HeaderAuth = () => {
+  const [isMenuOpen, setMenuState] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMenuState(!isMenuOpen);
+  };
+
+  return (
+    <Wrapper>
+      <StyledLogo isOpen={isMenuOpen} />
+      <InnerWrapper>
+        <LogOutButton />
+        <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
+      </InnerWrapper>
+      <MobileMenu isOpen={isMenuOpen} />
+      <DesktopMenu />
+    </Wrapper>
+  );
+};
+
+const HeaderNonAuth = () => {
   const [isMenuOpen, setMenuState] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -62,5 +90,21 @@ const Header = () => {
     </Wrapper>
   );
 };
+
+const Header = () => (
+  <AuthUserContext.Consumer>
+    {authUser =>
+      authUser ? (
+        <Wrapper>
+          <HeaderAuth />
+        </Wrapper>
+      ) : (
+        <Wrapper>
+          <HeaderNonAuth />
+        </Wrapper>
+      )
+    }
+  </AuthUserContext.Consumer>
+);
 
 export default Header;
